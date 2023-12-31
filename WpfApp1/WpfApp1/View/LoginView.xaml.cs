@@ -1,40 +1,54 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
-namespace WpfApp1.View
+namespace WpfApp1
 {
-    /// <summary>
-    /// Logique d'interaction pour LoginView.xaml
-    /// </summary>
-    public partial class LoginView : Window
+    public partial class LoginWindow : Window
     {
-        public LoginView()
+        public TextBox TxtAdminName => txtAdminName;
+        public PasswordBox TxtPassword => txtPassword;
+
+        public LoginWindow()
         {
-        }
-     private void Window_MouseDown(object sender, MouseEventArgs e)
-        {
-            if(e.LeftButton == MouseButtonState.Pressed)
-                DragMove();
-        }
-        private void btnMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            WindowState = WindowState.Minimized; 
+            InitializeComponent();
         }
 
-        private void txtUser_TextChanged(object sender, TextChangedEventArgs e)
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            using (SqlConnection sqlCon = new SqlConnection(@"Data source = DESKTOP-IBFNT2P\SQLEXPRESS; Initial Catalog=LibraryDB; Integrated Security=true; TrustServerCertificate=True"))
+            {
+                try
+                {
+                    if (sqlCon.State == ConnectionState.Closed)
+                        sqlCon.Open();
 
+                    String query = "select count(1) from LoginAdmin where AdminName=@AdminName and Password=@Password";
+                    SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                    sqlCmd.CommandType = CommandType.Text;
+                    sqlCmd.Parameters.AddWithValue("@AdminName", txtAdminName.Text);
+                    sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Password);
+
+                    int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
+
+                    if (count == 1)
+                    {
+                        Dashboard dashboard = new Dashboard();
+                        dashboard.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("ASIR T9***.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

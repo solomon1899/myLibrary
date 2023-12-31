@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp1.Dashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dashboard" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Menu latéral -->
+        <StackPanel Grid.Column="0" Background="#F4F4F4">
+            <Button Content="Button 1" Margin="10" Background="Gray" Foreground="White"/>
+            <Button Content="Button 2" Margin="10" Background="Gray" Foreground="White" Click="Button2_Click"/>
+            <Button Content="Button 3" Margin="10" Background="Gray" Foreground="White"/>
+        </StackPanel>
+
+        <!-- Contenu principal -->
+        <Grid Grid.Column="1">
+            <!-- Background Image -->
+            <Image Source="/imag/b2.jpg" Stretch="UniformToFill"/>
+
+            <!-- Centered Message -->
+            <TextBlock Text="Welcome " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="White"/>
+
+            <!-- Conteneur pour afficher le contenu de CrudUser -->
+            <ContentControl Grid.Column="1" x:Name="contentControl"/>
+        </Grid>
+        
+    </Grid>
+</Window>

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\taha-\OneDrive\Bureau\TP\dot\tp6\WpfApp1\WpfApp1\App.xaml
-2376403462
+4933183768
 
-42104924793
-194-1325968647
-MainWindow.xaml;View\LoginView.xaml;
+6398961801
+226-624383463
+MainWindow.xaml;View\CrudUser.xaml;View\DashBoard.xaml;View\loginView.xaml;
 
-True
+False
 
