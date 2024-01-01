@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="login" Height="450" Width="300"
         WindowStartupLocation="CenterScreen">
-    <Grid Background="#F4F4F4">
+    <Grid Background="LightBlue">
         <Grid VerticalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>

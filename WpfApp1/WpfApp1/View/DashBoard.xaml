@@ -11,9 +11,9 @@
 
         <!-- Menu latéral -->
         <StackPanel Grid.Column="0" Background="#F4F4F4">
-            <Button Content="Button 1" Margin="10" Background="Gray" Foreground="White"/>
-            <Button Content="Button 2" Margin="10" Background="Gray" Foreground="White" Click="Button2_Click"/>
-            <Button Content="Button 3" Margin="10" Background="Gray" Foreground="White"/>
+            <Button Content="BooK Crud" Margin="10" Background="Gray" Foreground="White" Click="Button_CRUDBOOK"/>
+            <Button Content="User Crud" Margin="10" Background="Gray" Foreground="White" Click="Button_CrudUser"/>
+            <Button Content="Book" Margin="10" Background="Gray" Foreground="White"/>
         </StackPanel>
 
         <!-- Contenu principal -->

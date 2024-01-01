@@ -22,11 +22,18 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
-        private void Button2_Click(object sender, RoutedEventArgs e)
+        private void Button_CrudUser(object sender, RoutedEventArgs e)
         {
             CrudUser crudUserWindow = new CrudUser();
             crudUserWindow.Show();
+            this.Hide();
         }
 
+        private void Button_CRUDBOOK(object sender, RoutedEventArgs e)
+        {
+            CrudBook CrudBookWindow = new CrudBook();
+            CrudBookWindow.Show();
+            this.Hide();
+        }
     }
 }

@@ -80,3 +80,5 @@ C:\Users\taha-\OneDrive\Bureau\TP\dot\tp6\WpfApp1\WpfApp1\obj\Debug\net6.0-windo
 C:\Users\taha-\OneDrive\Bureau\TP\dot\tp6\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\View\CrudUser.g.cs
 C:\Users\taha-\OneDrive\Bureau\TP\dot\tp6\WpfApp1\WpfApp1\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
 C:\Users\taha-\OneDrive\Bureau\TP\dot\tp6\WpfApp1\WpfApp1\bin\Debug\net6.0-windows\EntityFramework.dll
+C:\Users\taha-\OneDrive\Bureau\TP\dot\tp6\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\View\CrudBook.baml
+C:\Users\taha-\OneDrive\Bureau\TP\dot\tp6\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\View\CrudBook.g.cs

@@ -41,7 +41,7 @@ namespace WpfApp1
                     }
                     else
                     {
-                        MessageBox.Show("ASIR T9***.");
+                        MessageBox.Show("DOR 100.");
                     }
                 }
                 catch (Exception ex)
